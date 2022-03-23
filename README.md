@@ -1,6 +1,6 @@
-# java-gradle-starter-project
+# create-custom-styles-blog
 
-Here is a starter project for the ArcGIS Runtime SDK for Java with Gradle. 
+This is a project to demonstrate the use of custom style files in an ArcGIS Runtime application.  The process of creating and using the custom style in this app is discussed in this [blog](https://www.esri.com/arcgis-blog/?s=#&products=api-java).
 
 The project includes the Gradle wrapper, so there is no need to install Gradle to run the app.
 
@@ -58,7 +58,7 @@ Esri welcomes contributions from anyone and everyone. Please see our [guidelines
 
 ## Licensing
 
-Copyright 2019 Esri
+Copyright 2022 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 use this file except in compliance with the License. You may obtain a copy 
