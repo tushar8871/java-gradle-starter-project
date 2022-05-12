@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         artifactArtifactId = "java-testing"
+        gradleHome = tool 'gradle-server'
     }
     stages {
         stage('Clone Repository') {
@@ -13,7 +14,7 @@ pipeline {
             steps {
                 sh ''' #! /bin/bash
                 java -version
-                gradle -V
+                ${gradleHome}/bin/gradle -V
                 '''
             }
         }
@@ -24,7 +25,7 @@ pipeline {
                 #gradle clean build
                 
                 #Ignoring test cases 
-                gradle clean build #--exclude-task test -i
+                ${gradleHome}/bin/gradle clean build #--exclude-task test -i
                 '''
             }
         }
