@@ -12,7 +12,7 @@ pipeline {
         stage('verifying tools') {
             steps {
                 sh ''' #! /bin/bash
-                java --version
+                java -version
                 gradle -V
                 '''
             }
