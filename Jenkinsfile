@@ -33,9 +33,9 @@ pipeline {
                 withAwsCli(credentialsId: 'Cloud-coe-aws', defaultRegion: 'us-east-1') {
                     // DEPLOY TO BEANSTALK
                     script{
-                        def destinationJarFile = "${env.artifactArtifactId}-${env.BUILD_NUMBER}.jar"
-                        def versionLabel = "${env.artifactArtifactId}#${env.BUILD_NUMBER}"
-                        def description = "${env.BUILD_URL}"
+                        destinationJarFile = "${env.artifactArtifactId}-${env.BUILD_NUMBER}.jar"
+                        versionLabel = "${env.artifactArtifactId}#${env.BUILD_NUMBER}"
+                        description = "${env.BUILD_URL}"
                     }
                     sh """\
                         aws s3 cp ${env.artifactArtifactId}-*.jar s3://beesbank/$destinationJarFile
