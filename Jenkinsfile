@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh ''' #! /bin/bash
                 java -version
-                ${gradleHome}/bin/gradle -V
+                ${gradleHome}/bin/gradle -v
                 '''
             }
         }
